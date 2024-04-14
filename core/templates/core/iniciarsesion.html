@@ -20,12 +20,12 @@
                         <a href="/" class="nav-menu-link nav-link">Home</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="registro.html" class="nav-menu-link nav-link">Registrarse</a>
+                        <a href="{% url 'registro' %}" class="nav-menu-link nav-link">Registrarse</a>
                     </li>
         </header>
     </section>
     <section class="formulario-registro">
-        <form action="modificarperfil.html">
+        <form action="{% url 'modificarperfil' %}">
             <h3>Inicio de sesion</h3>
             <input class="form-box" type="email" name="correo" placeholder="Correo">
             <input class="form-box" type="password" name="contraseña" placeholder="Contraseña" title="La contraseña debe contener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula, un número y un carácter especial como !@#$%^&*" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$">

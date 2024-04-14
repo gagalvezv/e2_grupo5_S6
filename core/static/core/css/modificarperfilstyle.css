@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("../img/bg.png");
+    background-image: url("img/background.png");
 }
 
 .barra-sup {
@@ -75,21 +75,25 @@ body {
     color: white;
 }
 
-.formulario-registro {
-    width: 450px;
+
+/* CSS Formulario */
+
+.perfil {
+    width: 85%;
+    max-width: 800px;
     background: rgb(247, 247, 247);
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 50px;
-    margin: auto;
-    margin-top: 300px;
+    padding: 100px;
+    margin:auto;
+    margin-top: min(30%, 250px);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px;
 }
 
-.formulario-registro h3 {
+.perfil h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -102,22 +106,24 @@ body {
     border-style: hidden;
 }
 
-.formulario-registro p {
+.perfil p {
     margin-top: 20px;
     font-size: 14px;
 }
 
-.formulario-registro label {
+.perfil label {
     display: inline-block;
     display: flex;
     align-items: end;
+
 }
 
-.formulario-registro p {
+.perfil p {
     float: left;
     margin-right: 10px;
     margin-bottom: -1px;
 }
+
 
 .boton {
     background: gray;
@@ -125,7 +131,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 80px;
     font-size: 17px;
 }
 

@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - KickStreet</title>
-    <link rel="stylesheet" href="modificarperfilstyle.css">
+    <link rel="stylesheet" href="{% static 'core/css/modificarperfilstyle.css' %}">
+</head>
 </head>
 
 <body>
@@ -16,10 +18,10 @@
                 <a href="#" class="logo nav-link">KickStreet</a>
                 <ul class="nav-menu">
                     <li class="nav-menu-item">
-                        <a href="index.html" class="nav-menu-link nav-link">Home</a>
+                        <a href="/" class="nav-menu-link nav-link">Home</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="modificarperfil.html" class="nav-menu-link nav-link">Perfil</a>
+                        <a href="{% url 'modificarperfil' %}" class="nav-menu-link nav-link">Perfil</a>
                     </li>
         </header>
     </section>

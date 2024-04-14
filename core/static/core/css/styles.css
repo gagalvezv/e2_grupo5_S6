@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("../img/background.png");
+    background: url("../img/bg.png");
 }
 
 .barra-sup {

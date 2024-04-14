@@ -1,8 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - KickStreet</title>
@@ -41,26 +41,26 @@
         <h2>Nuestra Selección</h2>
         <ul class="categorias">
             <li class="categorias-list">
-                <a href="deportivas.html" class="categorias-link categoria1 font-cat">Deportivas</a>
+                <a href="{% url 'deportivas' %}" class="categorias-link categoria1 font-cat">Deportivas</a>
             </li>
             <li class="categorias-list">
-                <a href="casuales.html" class="categorias-link categoria2">Casuales</a>
+                <a href="{% url 'casuales' %}" class="categorias-link categoria2">Casuales</a>
             </li>
             <li class="categorias-list">
-                <a href="descanso.html" class="categorias-link categoria3">Descanso</a>
+                <a href="{% url 'descanso' %}" class="categorias-link categoria3">Descanso</a>
             </li>
         </ul>
     </div>
     <div>
         <ul class="img-categoria">
             <li>
-                <a href="deportivas.html"><img class="img-tamaño" src="{% static 'core/img/deportiva.png' %}" alt=""></a>
+                <a href="{% url 'deportivas' %}"><img class="img-tamaño" src="{% static 'core/img/deportiva.png' %}" alt=""></a>
             </li>
             <li>
-                <a href="casuales.html"><img class="img-tamaño" src="{% static 'core/img/casual.jpg' %}" alt=""></a>
+                <a href="{% url 'casuales' %}"><img class="img-tamaño" src="{% static 'core/img/casual.jpg' %}" alt=""></a>
             </li>
             <li>
-                <a href="descanso.html"><img class="img-tamaño" src="{% static 'core/img/descanso.jpg' %}" alt=""></a>
+                <a href="{% url 'descanso' %}"><img class="img-tamaño" src="{% static 'core/img/descanso.jpg' %}" alt=""></a>
             </li>
         </ul>
     </div>
