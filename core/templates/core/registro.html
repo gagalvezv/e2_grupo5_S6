@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'core/css/stylesRegistro.css' %}">
+</head>
+
+<body>
+    <section class="barra-sup">
+        <h3>Registrate para un 20% de descuento en tu primera compra!</h3>
+        <header class="header">
+            <nav class="nav">
+                <a href="/" class="logo nav-link">KickStreet</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a href="/" class="nav-menu-link nav-link">Home</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="{% url 'iniciarsesion' %}" class="nav-menu-link nav-link">Iniciar sesión</a>
+                    </li>
+        </header>
+    </section>
+    <section class="formulario-registro">
+        <form action="">
+            <h3>Formulario de registro</h3>
+            <input class="form-box" type="text" name="nombres" placeholder="Nombre">
+            <input class="form-box" type="text" name="apellidos" placeholder="Apellido">
+            <input class="form-box" type="email" name="correo" placeholder="Correo">
+            <input class="form-box" type="password" name="contraseña" placeholder="Contraseña" title="La contraseña debe contener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula, un número y un carácter especial como !@#$%^&*" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$">
+            <div class="term-checkbox">
+                <label for="terminos">
+                    <p>Estoy de acuerdo con los Terminos y Condiciones</p>
+                    <input class="checkbox" type="checkbox" name="terminos" id="terminos">
+                </label>
+            </div>     
+                <input class="boton" type="submit" value="Registrar">
+               
+        </form>
+    </section>
+</body>
+
+</html>

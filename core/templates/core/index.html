@@ -1,8 +1,8 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - KickStreet</title>
@@ -14,28 +14,28 @@
         <h3>Registrate para un 20% de descuento en tu primera compra!</h3>
         <header class="header">
             <nav class="nav">
-                <a href="#" class="logo nav-link">KickStreet</a>
+                <a href="/" class="logo nav-link">KickStreet</a>
                 <ul class="nav-menu">
                     <li class="nav-menu-item">
-                        <a href="index.html" class="nav-menu-link nav-link">Home</a>
+                        <a href="/" class="nav-menu-link nav-link">Home</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="iniciarsesion.html" class="nav-menu-link nav-link">Iniciar sesión</a>
+                        <a href="{% url 'iniciarsesion' %}" class="nav-menu-link nav-link">Iniciar sesión</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="registro.html" class="nav-menu-link nav-link">Registrarse</a>
+                        <a href="{% url 'registro' %}" class="nav-menu-link nav-link">Registrarse</a>
                     </li>
                     <li class="nav-menu-item">
                         <a href="carritodecompras.html" class="nav-menu-link nav-link">Carrito de compras</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="modificarperfil.html" class="nav-menu-link nav-link">Modificar Perfil</a>
+                        <a href="{% url 'modificarperfil' %}" class="nav-menu-link nav-link">Modificar Perfil</a>
                     </li>
                 </ul>
         </header>
     </section>
     <div class="frame">
-        <img src="img/img1.jpg" alt="">
+        <img src="{% static 'core/img/img1.jpg' %}">
     </div>
     <div>
         <h2>Nuestra Selección</h2>
@@ -54,13 +54,13 @@
     <div>
         <ul class="img-categoria">
             <li>
-                <a href="deportivas.html"><img class="img-tamaño" src="img/deportiva.png" alt=""></a>
+                <a href="deportivas.html"><img class="img-tamaño" src="{% static 'core/img/deportiva.png' %}" alt=""></a>
             </li>
             <li>
-                <a href="casuales.html"><img class="img-tamaño" src="img/casual.jpg" alt=""></a>
+                <a href="casuales.html"><img class="img-tamaño" src="{% static 'core/img/casual.jpg' %}" alt=""></a>
             </li>
             <li>
-                <a href="descanso.html"><img class="img-tamaño" src="img/descanso.jpg" alt=""></a>
+                <a href="descanso.html"><img class="img-tamaño" src="{% static 'core/img/descanso.jpg' %}" alt=""></a>
             </li>
         </ul>
     </div>

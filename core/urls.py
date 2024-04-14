@@ -1,6 +1,13 @@
 from django.urls import path
-from .views import index
+from . import views
 
 urlpatterns = [
-    path('', index,name="index"),
+    path('', views.index, name="index"),
+    path('iniciarsesion/', views.iniciarsesion, name="iniciarsesion"),
+    path('registro/', views.registro, name="registro"),
+    path('perfil/', views.modificarperfil, name="modificarperfil"),
+    path('deportivas/', views.deportivas, name="deportivas"),
+    path('casuales/', views.casuales, name="casuales"),
+    path('descanso/', views.descanso, name="descanso"),
+    
 ]
