@@ -25,11 +25,12 @@
         </header>
     </section>
     <section class="formulario-registro">
-        <form action="">
+        <form action="" method="post">
             <h3>Formulario de registro</h3>
+            <input class="form-box" type="text" name="run" placeholder="RUT">
             <input class="form-box" type="text" name="nombres" placeholder="Nombre">
             <input class="form-box" type="text" name="apellidos" placeholder="Apellido">
-            <input class="form-box" type="email" name="correo" placeholder="Correo">
+            <input class="form-box" type="email" name="usuario" placeholder="Usuario">
             <input class="form-box" type="password" name="contraseña" placeholder="Contraseña" title="La contraseña debe contener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula, un número y un carácter especial como !@#$%^&*" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$">
             <div class="term-checkbox">
                 <label for="terminos">

@@ -75,10 +75,33 @@ WSGI_APPLICATION = 'KickStreet.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+
+  'default': {
+
+    'ENGINE': 'django.db.backends.oracle',
+
+    'NAME': 'xe', # Solo el nombre de la base de datos
+
+    'USER': 'c##kickstreetbd',
+
+    'PASSWORD': 'kickstreetbd123',
+
+    'HOST': '192.168.1.83',
+
+    'PORT': '1522',
+
+    'TEST': {
+
+      'USER': 'default_test',
+
+      'TBLSPACE': 'default_test_tbls',
+
+      'TBLSPACE_TMP': 'default_test_tbls_tmp', 
+
+    },
+
+  },
+
 }
 
 
