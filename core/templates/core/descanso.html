@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra - KickStreet</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 </head>
 <body>
     <section class="barra-sup">
@@ -27,14 +28,14 @@
 
     <div class="producto">
         <div class="zapatilla">
-            <img src="img/descasoslide.png" alt="slideazul">
+            <img src="{% static 'core/img/descasoslide.png' %}" alt="slideazul">
             <h3>Yeezy Slide Slate MArine</h3>
             <p class="precio">$59.990</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Yeezy Slide Slate Marine')">Agregar al carrito</button>
         </div>
 
         <div class="zapatilla">
-            <img src="img/descansolidenegra.png" alt="slidenegra">
+            <img src="{% static 'core/img/descansolidenegra.png' %}" alt="slidenegra">
             <h3>Yeezy Slide Onyx</h3>
             <p class="precio">$59.990</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Yeezy Slide Onyx')">Agregar al carrito</button>

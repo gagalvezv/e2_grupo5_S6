@@ -26,6 +26,7 @@
     </section>
     <section class="formulario-registro">
         <form action="" method="post">
+            {% csrf_token %}
             <h3>Formulario de registro</h3>
             <input class="form-box" type="text" name="run" placeholder="RUT">
             <input class="form-box" type="text" name="nombres" placeholder="Nombre">

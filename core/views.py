@@ -31,16 +31,8 @@ def iniciarsesion(request):
     else:
         return render(request, 'core/iniciarsesion.html')
 
-
 def registro(request):
-    if request.method == 'POST':
-        form = Usuario(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'core/index.html')  # Cambia 'página_de_inicio' por la URL de la página a la que quieres redirigir después de guardar el usuario
-    else:
-        form = Usuario()
-    return render(request, 'core/index.html', {'form': form})
+    return render(request, 'core/registro.html')
 
 #def registro(request):
     #return render(request, 'core/registro.html')

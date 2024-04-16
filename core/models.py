@@ -11,6 +11,3 @@ class Usuario(models.Model):
     password = models.CharField(max_length=25, verbose_name='contraseña')
     perfil = models.IntegerField(null=True, blank=True, verbose_name='perfil')
     
-    
-class RegistrarUsuario(models.Model):
-    rut = models.IntegerField(primary_key=True, verbose_name='run')

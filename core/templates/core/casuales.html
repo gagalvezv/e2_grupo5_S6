@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra - KickStreet</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 </head>
 <body>
     <section class="barra-sup">
@@ -27,14 +28,14 @@
 
     <div class="producto">
         <div class="zapatilla">
-            <img src="img/casualsb.png" alt="sbblanco">
+            <img src="{% static 'core/img/casualsb.png' %}" alt="sbblanco">
             <h3>Sb Dunk Chlorophyll</h3>
             <p class="precio">$134.990</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Sb Dunk Chlorophyll')">Agregar al carrito</button>
         </div>
 
         <div class="zapatilla">
-            <img src="img/nikesbcafe.png" alt="sbcafe">
+            <img src="{% static 'core/img/nikesbcafe.png' %}" alt="sbcafe">
             <h3>Sb Dunk Wheat</h3>
             <p class="precio">$112.990</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Sb Dunk Wheat')">Agregar al carrito</button>

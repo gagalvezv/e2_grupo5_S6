@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra - KickStreet</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
 </head>
 <body>
     <section class="barra-sup">
@@ -27,14 +28,14 @@
 
     <div class="producto">
         <div class="zapatilla">
-            <img src="img/deportivasnike.png" alt="nike39">
+            <img src="{% static 'core/img/deportivasnike.png' %}" alt="nike39">
             <h3>Nike Air Zoom Pegasus 39</h3>
             <p class="precio">$129.990</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Nike Air Zoom Pegasus 39')">Agregar al carrito</button>
         </div>
 
         <div class="zapatilla">
-            <img src="img/deportivasnikere.png" alt="nikere7">
+            <img src="{% static 'core/img/deportivasnikere.png' %}" alt="nikere7">
             <h3>Nike Revolution 7</h3>
             <p class="precio">$89.990</p>
             <button class="btn-agregar" onclick="agregarAlCarrito('Nike Revolution 7')">Agregar al carrito</button>
