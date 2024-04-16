@@ -48,3 +48,6 @@ def casuales(request):
 
 def descanso(request):
     return render(request, 'core/descanso.html')
+
+def carro(request):
+    return render(request, 'core/carritodecompras.html')
