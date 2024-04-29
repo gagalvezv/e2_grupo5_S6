@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - KickStreet</title>
-    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">  
 </head>
 
 <body>
@@ -32,9 +31,13 @@
                     <li class="nav-menu-item">
                         <a href="{% url 'modificarperfil' %}" class="nav-menu-link nav-link">Modificar Perfil</a>
                     </li>
+                    <li class="nav-menu-item">
+                        <a href="{% url 'form_api' %}" class="nav-menu-link nav-link">Menu API</a>
+                    </li>
                 </ul>
         </header>
     </section>
+
     <div class="frame">
         <img src="{% static 'core/img/img1.jpg' %}">
     </div>
