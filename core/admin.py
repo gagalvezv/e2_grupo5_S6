@@ -5,3 +5,4 @@ from .models import Usuario, Categoria, Inventario
 admin.site.register(Usuario)
 admin.site.register(Categoria)
 admin.site.register(Inventario)
+

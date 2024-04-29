@@ -13,4 +13,5 @@ urlpatterns = [
     path('inventario/', views.lista_inventario, name="lista_inventario"),
     path('inventario/<id_inventario>', views.vista_inventario, name="vista_inventario"),  
     path('form-api/', views.form_api, name="form_api"),  
+    path('usuarios/', views.lista_usuarios, name="lista_usuarios"),
 ]

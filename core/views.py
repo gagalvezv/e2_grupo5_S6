@@ -10,6 +10,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework import status
 
 from .serializers import InventarioSerializer
+from .serializers import UsuarioSerializer
 
 # Create your views here.
 def index(request):
@@ -108,6 +109,29 @@ def lista_inventario(request):
             print('error', serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
+
+@csrf_exempt
+@api_view(['GET', 'POST'])
+def lista_usuarios(request):
+    if request.method == 'GET':
+        usuarios = Usuario.objects.all()
+        serializer = UsuarioSerializer(usuarios, many=True)
+        
+        return Response(serializer.data)
+    
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = UsuarioSerializer(data=data)
+        
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            print('error', serializer.errors)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+        
 @csrf_exempt
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])        
 def vista_inventario(request,id_inventario):
@@ -132,10 +156,37 @@ def vista_inventario(request,id_inventario):
     elif request.method == 'DELETE':
         inventario.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-        
     
+@csrf_exempt
+@api_view(['GET', 'PUT', 'PATCH', 'DELETE'])        
+def vista_usuarios(request,id_usuario):
+    try:
+        usuarios = Usuario.objects.get(id_usuario=id_usuario)
+    except Usuario.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+        
+    if request.method == 'GET':
+        serializer = UsuarioSerializer(usuarios)
+        return Response(serializer.data)
+    
+    elif request.method == 'PUT' or request.method == 'PATCH':
+        serializer = UsuarioSerializer(usuarios, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            print('error', serializer.errors)
+            return Response(serializer.errors, status=status.HTTP_404_BAD_REQUEST)\
+                
+    elif request.method == 'DELETE':
+        usuarios.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+        
 def form_api(request):
     return render(request, 'core/form_api.html') 
+
+
+
 
 
 
